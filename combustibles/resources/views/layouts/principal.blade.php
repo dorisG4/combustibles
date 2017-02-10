@@ -7,28 +7,28 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    {!!Html::style('bootstrap/css/bootstrap.min.css')!!}
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    {!!Html::style('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')!!}
     <!-- Ionicons -->
-    <link rel="stylesheet" href="fonts/ionicons.min.css">
+    {!!Html::style('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')!!}
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    {!!Html::style('dist/css/AdminLTE.min.css')!!}
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    {!!Html::style('dist/css/skins/_all-skins.min.css')!!}
     <!-- iCheck -->
-    <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+    {!!Html::style('plugins/iCheck/flat/blue.css')!!}
     <!-- Morris chart -->
-    <link rel="stylesheet" href="plugins/morris/morris.css">
+    {!!Html::style('plugins/morris/morris.css')!!}
     <!-- jvectormap -->
-    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    {!!Html::style('plugins/jvectormap/jquery-jvectormap-1.2.2.css')!!}
     <!-- Date Picker -->
-    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+    {!!Html::style('plugins/datepicker/datepicker3.css')!!}
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
+    {!!Html::style('plugins/daterangepicker/daterangepicker-bs3.css')!!}
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    {!!Html::style('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')!!}
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,7 +37,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition skin-green sidebar-mini">
     <div class="wrapper">
 
       <header class="main-header">
@@ -58,20 +58,18 @@
             <ul class="nav navbar-nav">
               <!-- Messages: style can be found in dropdown.less-->
 
-              <!-- Notifications: style can be found in dropdown.less -->
-           
-              <!-- Tasks: style can be found in dropdown.less -->
+             
 
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                  <img src="/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                   <span class="hidden-xs">Administrador</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                   <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                   <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                   
                     <p>
                       Administrador - Web Developer
@@ -85,7 +83,7 @@
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="#" class="btn btn-default btn-flat">Salir</a>
                     </div>
                   </li>
                 </ul>
@@ -116,100 +114,103 @@
 
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-            <li class="header">MENÚ DE NAVEGACIÓN</li>
+            <li class="header">MENÚ</li>
+
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-circle-o text-aqua"></i>
-                <span>Layout Options</span>
-                <span class="label label-primary pull-right">-></span>
+                <i class="fa fa-user text-green"></i>
+                <span>Usuarios</span>
+                <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Boxed</a></li>
+                <li><a href="/usuario/create" ><i class="fa fa-arrow-circle-right"></i>Nuevo Usuario</a></li>
+                <li><a href="/usuario"><i class="fa fa-arrow-circle-right"></i>Lista de Usuarios </a></li>
+                <li><a href="/usuario"><i class="fa fa-arrow-circle-right"></i>Logeos </a></li>
               </ul>
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-circle-o text-aqua"></i>
-                <span>Charts</span>
-                <span class="label label-primary pull-right">-></span>
+                <i class="fa  fa-industry text-green"></i>
+                <span>Proveedores</span>
+                <i class="fa fa-angle-left pull-right"></i>
                {{--  <i class="fa fa-angle-left pull-right"></i> --}}
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Morris</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Flot</a></li>
+                <li><a href="/proveedor/create"><i class="fa fa-arrow-circle-right"></i>Nuevo Proveedor</a></li>
+                <li><a href="/proveedor"><i class="fa fa-arrow-circle-right"></i>Lista de Proveedores</a></li>
               </ul>
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-circle-o text-aqua"></i>
-                <span>UI Elements</span>
-                <span class="label label-primary pull-right">-></span>
+                <i class="fa fa-sitemap text-green"></i> <span>Departamentos</span>
+                <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> General</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Icons</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Buttons</a></li>
-               
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i>Nuevo Departamento</a></li>
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i>Lista de Departamentos</a></li>
               </ul>
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-circle-o text-aqua"></i> <span>Forms</span>
-                <span class="label label-primary pull-right">-></span>
+                <i class="fa fa-user-secret text-green"></i>
+                <span>Choferes</span>
+                <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Editors</a></li>
+                <li><a href="/chofer/create"><i class="fa fa-arrow-circle-right"></i>Nuevo Chofer</a></li>
+                <li><a href=/chofer><i class="fa fa-arrow-circle-right"></i>Lista de Choferes</a></li>
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i>Control Choferes</a></li>
               </ul>
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-circle-o text-aqua"></i> <span>Tables</span>
-                <span class="label label-primary pull-right">-></span>
+                <i class="fa fa-train text-green"></i> <span>Combustibles</span>
+                <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Data tables</a></li>
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Nuevo Combustible</a></li>
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Lista de Combustibles</a></li>
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Vigencia de precios</a></li>
               </ul>
             </li>
             <li>
               <a href="#">
-                <i class="fa fa-circle-o text-aqua"></i> <span>Calendar</span>
-                <span class="label label-primary pull-right">-></span>
-              </a>
-            </li>
-         
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-circle-o text-aqua"></i> <span>Multilevel</span>
-                <span class="label label-primary pull-right">-></span>
+                <i class="fa fa-edit text-green"></i> <span>Cargas</span>
+                <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                <li>
-                  <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i></a>
-                  <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                    <li>
-                      <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
-                      <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i>Nueva Carga</a></li>
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i>Lista de Cargas</a></li>
               </ul>
             </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-automobile text-green"></i> <span>Unidades</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Nueva unidad</a></li>
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Lista de unidades</a></li>
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Marca Vehiculos</a></li>
+              </ul>
+            </li>
+               <li>
+              <a href="#">
+                <i class="fa fa-wrench text-green"></i> <span> Mantenimiento Unidades</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Nueva unidad</a></li>
+                <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Lista de unidades</a></li>
+              </ul>
+            </li>
+         
+          
            
             <li class="header">OTROS</li>
-            <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+            <li><a href="#"><i class="fa fa-circle text-red"></i> <span>Importante</span></a></li>
+            <li><a href="#"><i class="fa fa-circle text-yellow"></i> <span>Errores</span></a></li>
+            <li><a href="#"><i class="fa fa-circle text-green"></i> <span>Información</span></a></li>
           </ul>
 
         </section>
@@ -227,62 +228,54 @@
 
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version Laravel</b> 5.4
+          <b>Versión Laravel</b> 5.3
         </div>
-        <strong>Copyright &copy; 2017 <a href="#">H. Ayuntamiento de Córdoba</a>.</strong>
+        <strong>Copyright &copy; 2017 <a href="#">H. Ayuntamiento de Córdoba.</a></strong> Derechos reservados.
       </footer>
 
-      <!-- Control Sidebar -->
-      <aside class="control-sidebar control-sidebar-dark">
-        <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-          <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-          <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-      
-      </aside><!-- /.control-sidebar -->
-      <!-- Add the sidebar's background. This div must be placed
-           immediately after the control sidebar -->
-      <div class="control-sidebar-bg"></div>
+     
     </div><!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
-    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    {!!Html::script('plugins/jQuery/jQuery-2.1.4.min.js')!!}
     <!-- jQuery UI 1.11.4 -->
-    <script src="plugins\jQueryUI/jquery-ui.min.js"></script>
+    {!!Html::script('https://code.jquery.com/ui/1.11.4/jquery-ui.min.js')!!}
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+   
     <script>
       $.widget.bridge('uibutton', $.ui.button);
     </script>
+
     <!-- Bootstrap 3.3.5 -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    {!!Html::script('bootstrap/js/bootstrap.min.js')!!}
+   
     <!-- Morris.js charts -->
-    <script src="plugins/raphael-min.js"></script>
-    <script src="plugins/morris/morris.min.js"></script>
+    {!!Html::script('https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js')!!}
+    {!!Html::script('plugins/morris/morris.min.js')!!}
     <!-- Sparkline -->
-    <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
+    {!!Html::script('plugins/sparkline/jquery.sparkline.min.js')!!}
     <!-- jvectormap -->
-    <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    {!!Html::script('plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')!!}
+    {!!Html::script('plugins/jvectormap/jquery-jvectormap-world-mill-en.js')!!}
     <!-- jQuery Knob Chart -->
-    <script src="plugins/knob/jquery.knob.js"></script>
+    {!!Html::script('plugins/knob/jquery.knob.js')!!}
     <!-- daterangepicker -->
-    <script src="plugins/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    {!!Html::script('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js')!!}
+    {!!Html::script('plugins/daterangepicker/daterangepicker.js')!!}
     <!-- datepicker -->
-    <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+    {!!Html::script('plugins/datepicker/bootstrap-datepicker.js')!!}
     <!-- Bootstrap WYSIHTML5 -->
-    <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    {!!Html::script('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')!!}
     <!-- Slimscroll -->
-    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    {!!Html::script('plugins/slimScroll/jquery.slimscroll.min.js')!!}
     <!-- FastClick -->
-    <script src="plugins/fastclick/fastclick.min.js"></script>
+    {!!Html::script('plugins/fastclick/fastclick.min.js')!!}
     <!-- AdminLTE App -->
-    <script src="dist/js/app.min.js"></script>
+    {!!Html::script('../../dist/js/app.min.js')!!}
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard.js"></script>
+    {!!Html::script('dist/js/pages/dashboard.js')!!}
     <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
-  </body>
+    {!!Html::script('../../dist/js/demo.js')!!}
+
+   </body>
 </html>

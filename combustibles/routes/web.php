@@ -15,17 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('home', function () {
-    return view('home');
-});
+Route::resource('login','LoginController');
 
-Route::get('login', function () {
-    return view('login');
-});
+Route::resource('usuario','UsuarioController');
+Route::resource('proveedor','ProveedorController');
+Route::resource('chofer','ChoferController');
 
-Route::get('cargas', function () {
-    return view('admin/cargas');
-});
+
 
 
 

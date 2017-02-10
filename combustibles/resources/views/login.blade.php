@@ -24,14 +24,18 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="hold-transition login-page">
+  
+  <body class="hold-transition login-page ">
     <div class="login-box">
       <div class="login-logo">
-        <a href="#"><b>Sistema</b>Combustibles</a>
+
+        <a ><b>Sistema</b>Combustibles</a>
+    
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Ingrese al sistema</p>
-        <form action="../../index2.html" method="post">
+        {!!Form::open(['route'=>'login.store', 'method'=>'POST'])!!}
+       
           <div class="form-group has-feedback">
             <input type="email" class="form-control" placeholder="Email">
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -42,14 +46,12 @@
           </div>
          
           <div class="row">
-            
-
-            
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+              <button type="submit" class="btn btn-success btn-block btn-flat">Ingresar</button>
             </div><!-- /.col -->
           </div>
-        </form>
+        {!!Form::close()!!}  
+
 
 
       </div><!-- /.login-box-body -->
